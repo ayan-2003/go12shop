@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <!-- <h2 class="Shopisy">Cara Radio</h2> -->
+        <img src="img/logo.png" class="Shopisy">
+            <!-- <button class="btnLogin-popup">Login</button> -->
+
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <!--Login-->
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2 class="lo">Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email"  id="email" required>
+                    <label> Email</label>           
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" id="password" required>
+                    <label> Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label >
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn" onclick="auth()">Login</button>                  <!--Login button-->
+                <div class="login-register">
+                    <p>Don't have an account?
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!--Registration-->
+        <div class="form-box register" >
+            <h2 class="re">Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" id="username" required>
+                    <label> Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" id="email"required>
+                    <label> Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" id="username" required>
+                    <label> Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label >
+                        <input type="checkbox">
+                        I agree to the terms & conditions
+                    </label>
+                </div>
+                <button type="submit" class="btn" onclick="auth()">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? 
+                        <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function auth(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var username = document.getElementById("username").value;
+            if(email=="admin@gmail.com" && password=="123") {
+                alert("Login Successfully");
+                window.location.assign='index.html';
+            }
+            else{
+                alert("Invalid Login Credentials");
+                return;
+            }
+        }
+    </script>
+
+    <script src="script1.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
